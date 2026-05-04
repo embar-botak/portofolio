@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://shashidhar-portfolio.netlify.app"),
 
   title: {
-    default: "Shadiq Sardi | Full Stack Developer — React, Node.js, Next.js",
+    default: "Shadiq Sardi | Portfolio, Projects & Certifications",
     template: "%s | Shadiq Sardi",
   },
   description:
