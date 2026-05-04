@@ -30,7 +30,7 @@ const Hero = () => {
                         <Link to="projects" smooth={true} offset={-100} className="px-8 py-3 bg-violet-600 hover:bg-violet-700 text-white rounded-lg font-medium transition-all shadow-lg shadow-violet-600/20 cursor-pointer">
                             View Projects
                         </Link>
-                        <a href="/Shashidhar_Naik_2025.pdf" download className="px-8 py-3 border border-slate-700 hover:border-violet-500 hover:text-violet-400 text-slate-300 rounded-lg font-medium transition-all flex items-center gap-2 group">
+                        <a href="/cv Shadiq sardi.pdf" download className="px-8 py-3 border border-slate-700 hover:border-violet-500 hover:text-violet-400 text-slate-300 rounded-lg font-medium transition-all flex items-center gap-2 group">
                             <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
                             Download CV
                         </a>
