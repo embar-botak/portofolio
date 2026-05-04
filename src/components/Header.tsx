@@ -20,9 +20,8 @@ const Header = () => {
     const navLinks = [
         { name: 'Home', to: 'home' },
         { name: 'About', to: 'about' },
-        { name: 'Experience', to: 'experience' },
         { name: 'Projects', to: 'projects' },
-        { name: 'Open Source', to: 'opensource' },
+        { name: 'Certification', to: 'certification' },
         { name: 'Education', to: 'education' },
         { name: 'Contact', to: 'contact' },
     ];
@@ -35,7 +34,7 @@ const Header = () => {
             <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
                 <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0, 0)} role="link" aria-label="Go to top of page">
                     <Code2 className="text-violet-500 w-8 h-8" />
-                    <span className="text-xl font-bold tracking-tight">Shashidhar<span className="text-violet-500">.</span></span>
+                    <span className="text-xl font-bold tracking-tight">Shadiq<span className="text-violet-500">.</span></span>
                 </div>
 
                 {/* Desktop Nav */}

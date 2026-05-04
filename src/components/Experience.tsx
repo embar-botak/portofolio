@@ -18,16 +18,16 @@ const Experience = () => {
             period: "Feb 2025 - Present",
             tech: ["React.js", "TypeScript", "Material UI"],
             points: [
-                "Working as Software Engineer II and Frontend Lead on an enterprise Warehouse Management System (WMS).",
-                "Own frontend delivery using React.js, TypeScript, and Material UI.",
-                "Lead feature planning and execution, ensuring on-time delivery within sprint timelines.",
-                "Assign tasks to junior developers based on team lead guidance and feature complexity.",
+                "Working as Software Engineer II and Frontend Lead on enterprise Warehouse Management System (WMS).",
+                "Own full responsibility for frontend delivery using React.js, TypeScript, and Material UI.",
+                "Lead feature planning and execution, ensuring on-time delivery according to sprint schedule.",
+                "Assign tasks to junior developers based on team lead direction and feature complexity.",
                 "Actively track progress, follow up with team members, and resolve blockers.",
-                "Collaborate with business stakeholders to gather requirements, take feedback, and refine workflows.",
-                "Conduct technical discussions with team lead and developers to decide optimal UI and architectural approaches.",
-                "Develop reusable, scalable UI components improving consistency and maintainability.",
+                "Collaborate with business stakeholders to gather requirements, receive feedback, and refine workflows.",
+                "Conduct technical discussions with team lead and developers to determine optimal UI approach and architecture.",
+                "Develop reusable and scalable UI components to enhance consistency and maintainability.",
                 "Implement role-based access control (RBAC) at the UI level.",
-                "Integrate frontend modules with backend REST APIs for inventory, storage IN/OUT, reporting, and dashboards.",
+                "Integrate frontend modules with backend REST API for inventory, storage IN/OUT, reporting, and dashboards.",
             ],
         },
         {
@@ -36,12 +36,12 @@ const Experience = () => {
             period: "Feb 2024 - Jan 2025",
             tech: ["React.js", "Node.js", "MongoDB", "Express", "PostgreSQL"],
             points: [
-                "Contributed as a Software Engineer I on Stock Automation and early-phase WMS feature development.",
+                "Contributed as Software Engineer I on Stock Automation and early-phase WMS feature development.",
                 "Developed frontend modules using React.js, TypeScript, and Material UI.",
                 "Implemented UI flows for automated stock trading and monitoring dashboards.",
-                "Built and integrated frontend components with backend REST APIs (Node.js, Express, MongoDB).",
-                "Worked on initial WMS features including inventory listing, storage workflows, and basic reporting.",
-                "Participated in requirement discussions and supported feature planning during early product phases.",
+                "Built and integrated frontend components with backend REST API (Node.js, Express, MongoDB).",
+                "Worked on early-stage WMS features including inventory list, storage workflows, and basic reporting.",
+                "Participated in requirement discussions and supported feature planning during early product phase.",
                 "Demonstrated strong ownership and consistency, leading to promotion to Software Engineer II.",
             ],
         },
@@ -51,8 +51,8 @@ const Experience = () => {
             period: "Jan 2023 - Jan 2024",
             tech: ["React.js", "Nuxt.js", "Vuetify", "Bootstrap"],
             points: [
-                "Delivered frontend-heavy features using React.js, Nuxt.js, Vuetify, and Bootstrap.",
-                "Developed REST APIs using Node.js, Express.js, and TypeScript.",
+                "Delivered frontend-focused features using React.js, Nuxt.js, Vuetify, and Bootstrap.",
+                "Developed REST API using Node.js, Express.js, and TypeScript.",
                 "Participated in sprint planning, estimation, and feature discussions.",
                 "Mentored interns and junior developers on JavaScript, Git, and development best practices.",
                 "Assisted with deployment and production support on DigitalOcean.",
@@ -65,31 +65,31 @@ const Experience = () => {
             tech: ["React.js", "Node.js", "TypeScript"],
             points: [
                 "Developed reusable React components and frontend modules.",
-                "Built backend CRUD APIs using Node.js, Express, and TypeScript.",
+                "Built backend CRUD API using Node.js, Express, and TypeScript.",
                 "Proposed and implemented UI/UX improvements.",
                 "Collaborated with QA and business teams for feature releases.",
-                "Joined as Intern (Dec 2021 – Feb 2022); converted to Full-Time Developer based on performance.",
+                "Joined as Intern (Dec 2021 – Feb 2022); promoted to Full-Time Developer based on performance.",
             ],
         },
         {
-            role: "Assistant Team lead",
+            role: "Assistant Team Lead",
             company: "Vindhya e-infomedia pvt ltd",
             period: "Jan 2019 - Dec 2020",
-            tech: ["Networking", "Router configuration"],
+            tech: ["Networking", "Router Configuration"],
             points: [
-                "Coordinated with Level 1 technical support engineers to handle escalated issues beyond their scope of support.",
-                "Provided guidance and real-time assistance during complex troubleshooting scenarios.",
-                "Onboarded, mentored, and trained junior technical support engineers, improving team readiness and resolution efficiency.",
+                "Coordinated with Level 1 technical support engineers to handle issues escalated beyond their scope.",
+                "Provided real-time guidance and assistance during complex troubleshooting scenarios.",
+                "Conducted onboarding, mentoring, and training of junior technical support engineers, improving team readiness and resolution efficiency.",
             ],
         },
         {
             role: "Technical Support Engineer",
             company: "Microsys",
             period: "Oct 2017 - Dec 2018",
-            tech: ["Networking", "Router configuration", "Application Support"],
+            tech: ["Networking", "Router Configuration", "Application Support"],
             points: [
-                "Delivered first-level technical support for application installation, configuration, and basic networking issues.",
-                "Conducted end-user training sessions on a mechanical-industry billing application, ensuring smooth onboarding and efficient daily operations.",
+                "Provided first-level technical support for application installation, configuration, and basic networking issues.",
+                "Conducted end-user training sessions on mechanical industry billing application, ensuring smooth onboarding and daily operations efficiency.",
             ],
         },
     ];
@@ -160,7 +160,7 @@ const Experience = () => {
                                         </>
                                     ) : (
                                         <>
-                                            View Responsibilities <ChevronDown className="w-4 h-4" />
+                                            Show Responsibilities <ChevronDown className="w-4 h-4" />
                                         </>
                                     )}
                                 </div>

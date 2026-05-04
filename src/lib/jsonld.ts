@@ -10,12 +10,12 @@ export const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     "@id": `${BASE_URL}/#person`,
-    name: "Shashidhar Naik",
-    givenName: "Shashidhar",
-    familyName: "Naik",
+    name: "Shadiq Sardi",
+    givenName: "Shadiq",
+    familyName: "Sardi",
     jobTitle: "Software Engineer II",
     description:
-        "Full Stack Developer with 4+ years of experience specializing in MERN & MEVN stack. Frontend Lead for enterprise Warehouse Management Systems. Open source contributor publishing tools on NPM.",
+        "Full Stack Developer dengan pengalaman 4+ tahun berspesialisasi dalam stack MERN & MEVN. Frontend Lead untuk Sistem Manajemen Gudang enterprise. Kontributor open source yang menerbitkan alat di NPM.",
     url: BASE_URL,
     email: "shashidharnaik8@gmail.com",
     telephone: "+91-9119437320",
@@ -66,11 +66,11 @@ export const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${BASE_URL}/#website`,
-    name: "Shashidhar Naik — Full Stack Developer Portfolio",
+    name: "Shadiq Sardi — Portofolio Full Stack Developer",
     url: BASE_URL,
     description:
-        "Professional portfolio of Shashidhar Naik, a Software Engineer II specializing in React, Next.js, Node.js, and enterprise web application development.",
-    inLanguage: "en-US",
+        "Portofolio profesional Shadiq Sardi, Software Engineer II yang berspesialisasi dalam pengembangan aplikasi web enterprise, React, Next.js, dan Node.js.",
+    inLanguage: "id-ID",
     author: {
         "@id": `${BASE_URL}/#person`,
     },
@@ -89,9 +89,9 @@ export const projectsSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "@id": `${BASE_URL}/#projects`,
-    name: "Shashidhar Naik's Software Projects",
+    name: "Proyek Perangkat Lunak Shadiq Sardi",
     description:
-        "A collection of enterprise-grade web applications and open-source tools built by Shashidhar Naik.",
+        "Koleksi aplikasi web tingkat enterprise dan alat sumber terbuka yang dibangun oleh Shadiq Sardi.",
     numberOfItems: 6,
     itemListElement: [
         {

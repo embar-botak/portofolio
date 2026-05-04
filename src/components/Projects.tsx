@@ -11,87 +11,66 @@ interface Project {
     fullDesc?: string[];
     tags: string[];
     links?: { label: string; url: string; icon?: React.ReactNode }[];
+    image?: string;
 }
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const [fullScreenImage, setFullScreenImage] = useState<string | null>(null);
 
     const projects: Project[] = [
         {
-            title: "Warehouse Management System (WMS)",
-            role: "Frontend Lead",
-            desc: "Enterprise IIoT solution for managing inventory, storage, and quality inspection.",
+            title: "APP-KRL",
+            role: "UI/UX Designer",
+            desc: "An app for checking KRL schedules, routes, and station info in real-time.",
             fullDesc: [
-                "Led frontend delivery for Inventory, Storage IN/OUT, Quality Inspection, and BOM modules.",
-                "Implemented QR-based tracking and CSV bulk upload workflows.",
-                "Built real-time dashboards for multi-warehouse inventory visibility.",
-                "Coordinated with business teams and developers for optimal feature delivery.",
-                "Integrate frontend modules with backend REST APIs."
+                "Designed an intuitive mobile-first interface for KRL schedule searching.",
+                "Created a search UI component featuring popular station selections.",
+                "Implemented user-friendly and illustrative empty state designs.",
+                "Utilized a modern purple color palette and clean typography to enhance UX."
             ],
-            tags: ["React", "Material UI", "IIoT", "Enterprise"]
+            tags: ["Flutter", "Dart", "API"],
+            image: "/krl-mockup.png"
         },
         {
-            title: "Stock Automation Platform",
-            role: "Full Stack Developer",
-            desc: "Automated trading value-added system with real-time buy/sell execution.",
+            title: "Authentication UI Design",
+            role: "UI/UX Designer",
+            desc: "Modern login page interface design with clean typography and dynamic illustrations.",
             fullDesc: [
-                "Developed automated stock trading workflows integrated with broker APIs.",
-                "Implemented real-time buy/sell automation and Cron-based background jobs.",
-                "Built and integrated frontend components with backend REST APIs."
+                "Designed user interfaces for Sign In and Sign Up pages.",
+                "Combined minimalist typography elements with attractive sporty illustrations.",
+                "Created a clear visual hierarchy for form components like text inputs, checkboxes, and access buttons.",
+                "Designed Single Sign-On (SSO) integration options like 'Sign in with Google' for user convenience."
             ],
-            tags: ["MERN Stack", "Cron Jobs", "Real-time"]
+            tags: ["Figma", "UI/UX Design", "Web Design", "Illustration"],
+            image: "/login-mockup.png"
         },
         {
-            title: "IIoT Monitoring Dashboard",
-            role: "MEVN Stack Developer",
-            desc: "Data visualization platform for machine health and production metrics.",
+            title: "e-Rapor Login UI Design",
+            role: "UI/UX Designer",
+            desc: "Login page interface design for a school's e-Rapor educational portal system.",
             fullDesc: [
-                "Developed data visualization dashboard to monitor machine health, performance trends, and production metrics.",
-                "Enabled real-time insights for management and engineers to support informed decision-making.",
-                "Implemented User Management with role-based access control (RBAC).",
-                "Developed Shift Management and Production Planning modules."
+                "Designed a responsive and professional login page layout for the e-Rapor academic portal.",
+                "Combined school branding identity elements with dynamic student visual compositions.",
+                "Created an authentication form hierarchy that includes credential inputs, academic year dropdowns, and remember-me options.",
+                "Maintained aesthetic consistency with a clean color scheme (white, gray, and red accents)."
             ],
-            tags: ["Vue.js", "Node.js", "Charts", "Analytics"]
+            tags: ["Figma", "UI/UX Design", "Web Design", "Education"],
+            image: "/erapor-mockup.png"
         },
         {
-            title: "QR Layout Designer & Libraries",
-            role: "Open Source Contributor",
-            desc: "A suite of tools for designing and printing QR labels.",
+            title: "Hospitality Authentication UI Design",
+            role: "UI/UX Designer",
+            desc: "Login page interface design for an exclusive resort and hospitality management application.",
             fullDesc: [
-                "Developed `qrlayout-core`: A core logic library for QR layout generation.",
-                "Developed `qrlayout-ui`: A UI component library for the designer.",
-                "Built a comprehensive demo application to showcase the libraries."
+                "Designed a luxury resort-themed login page layout with the 'Damaga Suites' visual identity.",
+                "Used a bright blue background combined with traditional floral pattern ornaments to create an elegant feel.",
+                "Built form components (Username & Password) with a minimalist style inside a semi-transparent floating glass card.",
+                "Focused on a centered layout design to highlight the logo and the main authentication form."
             ],
-            tags: ["Open Source", "NPM", "React", "TypeScript"],
-            links: [
-                { label: "qrlayout-core", url: "https://www.npmjs.com/package/qrlayout-core" },
-                { label: "qrlayout-ui", url: "https://www.npmjs.com/package/qrlayout-ui" },
-                { label: "Demo App", url: "https://qr-layout-designer.netlify.app/" }
-            ]
+            tags: ["Figma", "UI/UX Design", "Hotel", "Web Design"],
+            image: "/hotel-mockup.png"
         },
-        {
-            title: "E-Commerce Application",
-            role: "Frontend Developer",
-            desc: "Responsive e-commerce platform with product catalog and shopping cart.",
-            fullDesc: [
-                "Built responsive UI using Bootstrap and custom CSS.",
-                "Implemented product filtering, search, and cart functionality.",
-                "Optimized for performance and mobile devices."
-            ],
-            tags: ["React.js", "Bootstrap", "JavaScript"]
-        },
-        {
-            title: "HR Management System (HRMS)",
-            role: "Full Stack Developer",
-            desc: "Comprehensive HR solution for employee management and payroll.",
-            fullDesc: [
-                "Developed comprehensive employee management modules.",
-                "Built backend for payroll processing and attendance tracking.",
-                "Implemented secure authentication and role-based access."
-            ],
-            tags: ["React.js", "Bootstrap", "Node.js", "Express", "MongoDB"]
-        },
-
     ];
 
     return (
@@ -105,7 +84,7 @@ const Projects = () => {
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
                     <p className="text-slate-400 max-w-2xl">
-                        A selection of complex enterprise applications and systems I've engineered.
+                        A selection of UI/UX designs and applications I have built.
                     </p>
                 </motion.div>
 
@@ -113,40 +92,43 @@ const Projects = () => {
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.9 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             whileHover={{ y: -5 }}
-                            className="bg-slate-800/40 rounded-xl overflow-hidden border border-slate-700/50 hover:border-violet-500/50 group transition-all flex flex-col"
+                            onClick={() => setSelectedProject(project)}
+                            className="bg-slate-800/40 rounded-xl overflow-hidden border border-slate-700/50 hover:border-violet-500/50 cursor-pointer group transition-all flex flex-col"
                         >
-                            <div className="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-8 group-hover:from-slate-800 group-hover:to-violet-900/20 transition-colors">
-                                <div className="text-center">
-                                    <h3 className="text-xl font-bold text-slate-200 mb-1">{project.title}</h3>
-                                    <span className="text-sm text-violet-400 font-medium">{project.role}</span>
-                                </div>
+                            {/* Image Section - Top Half */}
+                            <div className="h-48 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden flex items-center justify-center p-4 border-b border-slate-700/50">
+                                {project.image ? (
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover rounded-lg shadow-sm group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                ) : (
+                                    <div className="w-full h-full bg-slate-800/50 rounded-lg flex items-center justify-center shadow-inner border border-slate-700/50 group-hover:scale-105 transition-transform duration-500">
+                                        <span className="text-slate-500 font-medium text-sm">Image Preview</span>
+                                    </div>
+                                )}
                             </div>
 
+                            {/* Content Section - Bottom Half */}
                             <div className="p-6 flex flex-col flex-grow">
+                                <h3 className="text-xl font-bold text-slate-200 mb-3">{project.title}</h3>
                                 <p className="text-slate-400 mb-6 text-sm leading-relaxed">
                                     {project.desc}
                                 </p>
 
-                                <div className="flex flex-wrap gap-2 mb-6 mt-auto">
+                                <div className="flex flex-wrap gap-2 mt-auto">
                                     {project.tags.map((tag, i) => (
                                         <span key={i} className="flex items-center gap-1 text-xs px-2 py-1 bg-slate-900 text-slate-300 rounded border border-slate-700">
-                                            <Tag className="w-3 h-3" />
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
-
-                                <button
-                                    onClick={() => setSelectedProject(project)}
-                                    className="w-full mt-2 py-2 rounded-lg bg-slate-700/50 hover:bg-violet-600 hover:text-white text-slate-300 text-sm font-medium transition-all flex items-center justify-center gap-2"
-                                >
-                                    View Details <ExternalLink className="w-4 h-4" />
-                                </button>
                             </div>
                         </motion.div>
                     ))}
@@ -171,16 +153,33 @@ const Projects = () => {
                             >
                                 <button
                                     onClick={() => setSelectedProject(null)}
-                                    className="absolute top-4 right-4 p-2 bg-slate-800 rounded-full hover:bg-slate-700 transition-colors"
+                                    className="absolute top-4 right-4 p-2 bg-slate-800 rounded-full hover:bg-slate-700 transition-colors z-10"
                                 >
                                     <X className="w-5 h-5 text-slate-400" />
                                 </button>
 
-                                <h3 className="text-2xl font-bold text-white mb-2">{selectedProject.title}</h3>
+                                {selectedProject.image && (
+                                    <div
+                                        className="w-full h-48 sm:h-64 mb-6 rounded-xl overflow-hidden bg-slate-800 border border-slate-700/50 mt-8 sm:mt-0 cursor-pointer group relative"
+                                        onClick={() => setFullScreenImage(selectedProject.image || null)}
+                                        title="Click to enlarge"
+                                    >
+                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                                            <span className="text-white font-medium px-4 py-2 bg-black/50 rounded-lg backdrop-blur-sm">View Full Screen</span>
+                                        </div>
+                                        <img
+                                            src={selectedProject.image}
+                                            alt={selectedProject.title}
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </div>
+                                )}
+
+                                <h3 className="text-2xl font-bold text-white mb-2 mt-2">{selectedProject.title}</h3>
                                 <p className="text-violet-400 font-medium mb-6">{selectedProject.role}</p>
 
                                 <div className="space-y-4 mb-8">
-                                    <h4 className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Key Responsibilities & Features</h4>
+                                    <h4 className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Responsibilities & Key Features</h4>
                                     <ul className="space-y-2">
                                         {selectedProject.fullDesc?.map((item, i) => (
                                             <li key={i} className="flex items-start gap-3 text-slate-300">
@@ -222,6 +221,41 @@ const Projects = () => {
                                         </div>
                                     </div>
                                 )}
+                            </motion.div>
+                        </div>
+                    )}
+                </AnimatePresence>
+
+                {/* Full Screen Image Modal */}
+                <AnimatePresence>
+                    {fullScreenImage && (
+                        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                onClick={() => setFullScreenImage(null)}
+                                className="absolute inset-0 bg-black/90 backdrop-blur-sm cursor-zoom-out"
+                            />
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.95 }}
+                                className="relative z-10 w-full max-w-6xl max-h-[90vh] flex flex-col items-center justify-center pointer-events-none"
+                            >
+                                <div className="relative pointer-events-auto">
+                                    <button
+                                        onClick={() => setFullScreenImage(null)}
+                                        className="absolute -top-12 right-0 p-2 bg-slate-800/80 hover:bg-slate-700 rounded-full transition-colors z-20"
+                                    >
+                                        <X className="w-6 h-6 text-white" />
+                                    </button>
+                                    <img
+                                        src={fullScreenImage}
+                                        alt="Full Screen Preview"
+                                        className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+                                    />
+                                </div>
                             </motion.div>
                         </div>
                     )}

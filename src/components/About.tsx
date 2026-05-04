@@ -1,29 +1,29 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Database, Globe, Server, Cpu } from 'lucide-react';
+import { Database, Globe, Server, Cpu, PenTool, Settings } from 'lucide-react';
 
 const About = () => {
     const skills = [
         {
             category: "Frontend Development",
             icon: <Globe className="w-6 h-6 text-violet-400" />,
-            items: ["React.js", "Nuxt.js", "TypeScript", "JavaScript (ES6+)", "HTML5/CSS3", "Material UI", "Vuetify", "Bootstrap"]
+            items: ["React.js", "Next.js", "JavaScript (ES6+)", "HTML5/CSS3", "Bootstrap"]
         },
         {
-            category: "Backend & APIs",
-            icon: <Server className="w-6 h-6 text-pink-400" />,
-            items: ["Node.js", "Express.js", "RESTful APIs"]
+            category: "UI/UX Design",
+            icon: <PenTool className="w-6 h-6 text-pink-400" />,
+            items: ["UI Design", "Design System", "User Flow & Basic UX Thinking", "Wireframing & Prototyping"]
         },
         {
             category: "Database & Cloud",
-            icon: <Database className="w-6 h-6 text-blue-400" />,
-            items: ["MongoDB", "Cron Jobs", "Deployment", "DevOps Basics"]
+            icon: <Settings className="w-6 h-6 text-blue-400" />,
+            items: ["Problem Solving", "Attention to Detail", "Creativity", "Continuous Learning"]
         },
         {
-            category: "Tools & Concepts",
+            category: "Tools",
             icon: <Cpu className="w-6 h-6 text-emerald-400" />,
-            items: ["Git/GitHub", "Postman", "VS Code", "Performance Optimization", "Scalable Architecture"]
+            items: ["Git/GitHub", "VS Code", "Figma", "Antigravity"]
         }
     ];
 
@@ -39,10 +39,7 @@ const About = () => {
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
                     <p className="text-lg text-slate-400 leading-relaxed">
-                        I am a <span className="text-violet-400 font-semibold">Software Engineer II</span> with 4+ years of experience in building scalable, enterprise-grade web applications.
-                        Currently, I lead frontend delivery for a major <span className="text-pink-400">Warehouse Management System (WMS)</span>.
-                        My journey includes transitioning from technical support to full-stack development, driven by a passion for solving complex problems through code.
-                        Beyond my core work, I am an active open-source contributor, creating tools like <span className="text-violet-400">qrlayout</span> to empower other developers.
+                        I'm a Full Stack Developer with expertise in building enterprise-level applications. Specializing in React, Next.js, Node.js, and TypeScript, I create scalable and user-centric solutions. I also have a strong foundation in UI/UX principles to design intuitive interfaces.
                     </p>
                 </motion.div>
 

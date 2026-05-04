@@ -7,7 +7,7 @@ const OpenSource = () => {
     const packages = [
         {
             name: "qrlayout-core",
-            desc: "A powerful core logic library for QR layout generation, handling the complex calculations for sizing and positioning.",
+            desc: "Powerful core logic library for QR layout creation, handling complex calculations for sizing and positioning.",
             url: "https://www.npmjs.com/package/qrlayout-core",
             tags: ["TypeScript", "QR Code", "Layout Engine"],
             stats: { downloads: "1k+", stars: "15+" }
@@ -21,7 +21,7 @@ const OpenSource = () => {
         },
         {
             name: "env-drift-check",
-            desc: "A CLI tool to detect drift between .env.example / .env.template and your actual .env files, ensuring environment consistency.",
+            desc: "CLI tool to detect discrepancies between .env.example / .env.template and your active .env file, ensuring environment consistency.",
             url: "https://www.npmjs.com/package/env-drift-check",
             tags: ["CLI", "DevOps", "Config"],
             stats: { downloads: "200+", stars: "5+" }

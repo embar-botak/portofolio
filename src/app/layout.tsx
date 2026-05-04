@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://shashidhar-portfolio.netlify.app"),
 
   title: {
-    default: "Shashidhar Naik | Full Stack Developer — React, Node.js, Next.js",
-    template: "%s | Shashidhar Naik",
+    default: "Shadiq Sardi | Full Stack Developer — React, Node.js, Next.js",
+    template: "%s | Shadiq Sardi",
   },
   description:
-    "Portfolio of Shashidhar Naik — Software Engineer II with 4+ years building scalable enterprise web apps. Expert in React, Next.js, Node.js, TypeScript, and MERN/MEVN stack. Open source contributor.",
+    "Portofolio Shadiq Sardi — Software Engineer II dengan pengalaman 4+ tahun membangun aplikasi web enterprise yang skalabel. Ahli dalam React, Next.js, Node.js, TypeScript, dan stack MERN/MEVN. Kontributor open source.",
 
   keywords: [
     // Identity
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
     "Software Engineer Portfolio India",
   ],
 
-  authors: [{ name: "Shashidhar Naik", url: "https://shashidhar-portfolio.netlify.app" }],
-  creator: "Shashidhar Naik",
-  publisher: "Shashidhar Naik",
+  authors: [{ name: "Shadiq Sardi", url: "https://shashidhar-portfolio.netlify.app" }],
+  creator: "Shadiq Sardi",
+  publisher: "Shadiq Sardi",
 
   formatDetection: {
     email: false,
@@ -89,21 +89,21 @@ export const metadata: Metadata = {
   // ── Open Graph ────────────────────────────────────────────────────────────
   openGraph: {
     type: "profile",
-    firstName: "Shashidhar",
-    lastName: "Naik",
+    firstName: "Shadiq",
+    lastName: "Sardi",
     username: "shashi089",
-    title: "Shashidhar Naik | Full Stack Developer Portfolio",
+    title: "Shadiq Sardi | Portofolio Full Stack Developer",
     description:
-      "Software Engineer II with 4+ years of experience. React, Next.js, Node.js, TypeScript. Frontend Lead for enterprise Warehouse Management System. Open source contributor.",
+      "Software Engineer II dengan pengalaman 4+ tahun. React, Next.js, Node.js, TypeScript. Frontend Lead untuk Sistem Manajemen Gudang enterprise. Kontributor open source.",
     url: "https://shashidhar-portfolio.netlify.app",
-    siteName: "Shashidhar Naik Portfolio",
-    locale: "en_US",
+    siteName: "Portofolio Shadiq Sardi",
+    locale: "id_ID",
     images: [
       {
         url: "/portfolio_hero_section.png",
         width: 1200,
         height: 630,
-        alt: "Shashidhar Naik — Full Stack Developer Portfolio Preview",
+        alt: "Shadiq Sardi — Pratinjau Portofolio Full Stack Developer",
         type: "image/png",
       },
     ],
@@ -112,13 +112,13 @@ export const metadata: Metadata = {
   // ── Twitter Card ──────────────────────────────────────────────────────────
   twitter: {
     card: "summary_large_image",
-    title: "Shashidhar Naik | Full Stack Developer — React, Node.js, Next.js",
+    title: "Shadiq Sardi | Full Stack Developer — React, Node.js, Next.js",
     description:
-      "Software Engineer II specializing in scalable enterprise web apps. Expert in MERN/MEVN stack and open source tools.",
+      "Software Engineer II berspesialisasi dalam aplikasi web enterprise yang skalabel. Ahli dalam stack MERN/MEVN dan alat open source.",
     images: [
       {
         url: "/portfolio_hero_section.png",
-        alt: "Shashidhar Naik Portfolio Preview",
+        alt: "Pratinjau Portofolio Shadiq Sardi",
       },
     ],
     creator: "@shashidhar_dev",
@@ -154,7 +154,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="id" className="scroll-smooth">
       <head>
         {/* ── Font Performance: Preconnect to Google Fonts ── */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

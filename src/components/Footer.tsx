@@ -7,22 +7,16 @@ const Footer = () => {
 
     const socialLinks = [
         {
-            label: "GitHub Profile — shashi089",
-            href: "https://github.com/shashi089",
+            label: "Profil GitHub — embar-botak",
+            href: "https://github.com/embar-botak",
             icon: <Github className="w-4 h-4" aria-hidden="true" />,
             text: "GitHub",
         },
         {
-            label: "LinkedIn Profile — Shashidhar Naik",
-            href: "https://www.linkedin.com/in/shashidhar-naik-aab5b512a/",
+            label: "Profil LinkedIn — Shadiq Sardi Ramadhan",
+            href: "https://www.linkedin.com/in/shadiq-sardi-ramadhan-946013388/",
             icon: <Linkedin className="w-4 h-4" aria-hidden="true" />,
             text: "LinkedIn",
-        },
-        {
-            label: "NPM Packages by Shashidhar Naik",
-            href: "https://www.npmjs.com/~shashidharlbs",
-            icon: <Package className="w-4 h-4" aria-hidden="true" />,
-            text: "NPM",
         },
     ];
 
@@ -39,7 +33,7 @@ const Footer = () => {
                     <div className="flex items-center gap-2">
                         <Code2 className="text-violet-500 w-5 h-5" aria-hidden="true" />
                         <span className="font-bold text-slate-300">
-                            Shashidhar<span className="text-violet-500">.</span>
+                            Shadiq<span className="text-violet-500">.</span>
                         </span>
                     </div>
 
@@ -65,9 +59,9 @@ const Footer = () => {
 
                     {/* Copyright */}
                     <p className="text-slate-600 text-sm">
-                        <span aria-label={`Copyright ${currentYear} Shashidhar Naik`}>
+                        <span aria-label={`Copyright ${currentYear} Shadiq Sardi`}>
                             &copy; {currentYear}{" "}
-                            <span className="text-slate-500 font-medium">Shashidhar Naik</span>
+                            <span className="text-slate-500 font-medium">Shadiq Sardi</span>
                             . All rights reserved.
                         </span>
                     </p>
@@ -75,8 +69,8 @@ const Footer = () => {
 
                 {/* SEO: Hidden but accessible description for crawlers */}
                 <p className="sr-only">
-                    Shashidhar Naik is a Full Stack Developer based in Bangalore, India.
-                    Specializing in React, Next.js, Node.js, TypeScript, and enterprise web application development.
+                    Shadiq Sardi is a Full Stack Developer based in Indonesia.
+                    Specialized in React, Next.js, Node.js, TypeScript, and enterprise web application development.
                 </p>
             </div>
         </footer>

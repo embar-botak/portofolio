@@ -30,7 +30,7 @@ const PortfolioAssistant = () => {
         {
             id: '1',
             type: 'bot',
-            text: "Hi there! I'm Shashidhar's AI Assistant. Ask me anything about his WMS expertise, React/Next.js skills, open-source packages, or professional background!",
+            text: "Hi! I'm Shadiq's AI Assistant. Ask me anything about WMS expertise, React/Next.js, open-source packages, or professional background!",
             timestamp: new Date()
         }
     ]);
@@ -225,19 +225,14 @@ const PortfolioAssistant = () => {
     // ── Education Data ─────────────────────────────────────────────────────
     const educationData = [
         {
-            degree: "B.E. in Electronics and Communication Engineering",
-            school: "BLDEA's College of Engineering and Technology, Bijapur",
-            year: "2017"
+            degree: "Vocational High School (Software Engineering and Game Development)",
+            school: "SMK Ghama Caraka",
+            year: "2024"
         },
         {
-            degree: "PUC (Higher Secondary Education)",
-            school: "SNJPNM'S PU Science College, Nidasoshi",
-            year: "2013"
-        },
-        {
-            degree: "SSLC (Secondary Education)",
-            school: "Rani Channamma High School, Hukkeri",
-            year: "2011"
+            degree: "Islamic Boarding School (MTs Darul Fallah)",
+            school: "Pesantren Pertanian Darul Fallah",
+            year: "2020"
         }
     ];
 
@@ -253,18 +248,18 @@ const PortfolioAssistant = () => {
         const lowerInput = input.toLowerCase();
 
         // ── Greetings ──────────────────────────────────────────────────────
-        if (lowerInput.match(/^(hi|hello|hey|greetings|howdy|sup|yo)[\s!?]*$/)) {
-            return "Hello! Great to have you here. I can tell you about Shashidhar's WMS expertise, his open-source packages, or his full work history. What would you like to know?";
+        if (lowerInput.match(/^(hi|hello|hey|greetings|morning|afternoon|evening)[\s!?]*$/)) {
+            return "Hello! Nice to meet you. I can tell you about Shadiq's WMS expertise, open-source packages, or professional background. What would you like to know?";
         }
 
         // ── Identity ───────────────────────────────────────────────────────
-        if (lowerInput.includes('who are you') || lowerInput.includes('your name') || lowerInput.includes('about yourself') || lowerInput.includes('intro')) {
-            return "I'm Shashidhar's AI Portfolio Assistant! I can help you explore his 4+ years of professional experience, technical skills, projects, open-source contributions, and education. Try asking: 'What is your tech stack?', 'Tell me about WMS', or 'What open source packages have you built?'";
+        if (lowerInput.includes('who are you') || lowerInput.includes('your name') || lowerInput.includes('about you') || lowerInput.includes('intro')) {
+            return "I'm Shadiq's AI Portfolio Assistant! I can help you explore his 4+ years of professional experience, technical expertise, projects, open-source contributions, and education. Try asking: 'What's your tech stack?', 'Tell me about WMS', or 'What open-source packages have you built?'";
         }
 
         // ── About / Bio ────────────────────────────────────────────────────
-        if (lowerInput.includes('about') && (lowerInput.includes('shashi') || lowerInput.includes('you') || lowerInput.includes('yourself'))) {
-            return "Shashidhar is a Software Engineer II with 4+ years of experience building scalable, enterprise-grade web applications. He currently leads frontend delivery for the Panasonic WMS. His journey began in technical support before transitioning into full-stack development. He is also an active open-source contributor, having published qrlayout-core, qrlayout-ui, and env-drift-check on NPM.";
+        if (lowerInput.includes('about') && (lowerInput.includes('shadiq') || lowerInput.includes('you'))) {
+            return "Shadiq is a Software Engineer II with 4+ years of experience building scalable enterprise web applications. Currently, he's leading frontend delivery for the Panasonic WMS. His journey started in technical support before transitioning to full-stack development. He's also an active open-source contributor, publishing qrlayout-core, qrlayout-ui, and env-drift-check on NPM.";
         }
 
         // ── Open Source ────────────────────────────────────────────────────
@@ -275,7 +270,7 @@ const PortfolioAssistant = () => {
                 }
             }
             const pkgList = openSourceData.map(p => `**${p.name}** (${p.stats})`).join(', ');
-            return `Shashidhar has published 3 open-source NPM packages: ${pkgList}. Ask about any one of them to learn more!`;
+            return `Shadiq has published 3 open-source NPM packages: ${pkgList}. Ask about any of them to learn more!`;
         }
 
         // ── Specific Package check ─────────────────────────────────────────
@@ -295,61 +290,61 @@ const PortfolioAssistant = () => {
         // ── Specific Project ───────────────────────────────────────────────
         for (const proj of projectData) {
             if (proj.aliases.some(alias => lowerInput.includes(alias))) {
-                return `**${proj.title}** is ${proj.desc} Built using: ${proj.tech}. Key highlights: ${proj.highlights.join(" | ")}`;
+                return `**${proj.title}** is ${proj.desc} Built with: ${proj.tech}. Key highlights: ${proj.highlights.join(" | ")}`;
             }
         }
 
         // ── Broad: Experience / Career ─────────────────────────────────────
-        if (lowerInput.includes('experience') || lowerInput.includes('history') || lowerInput.includes('career') || lowerInput.includes('work') || lowerInput.includes('job') || lowerInput.includes('background')) {
-            return "Shashidhar has 4+ years in software development. His career: Software Engineer II at Cymbeline Innovation (Feb 2025–Present) → Software Engineer I at Cymbeline (Feb 2024–Jan 2025) → Software Developer at Flyers Soft (2023–2024) → Software Developer at Triofi Technologies (2021–2022). Before that, he was an Assistant Team Lead at Vindhya e-infomedia (2019–2020) and a Technical Support Engineer at Microsys (2017–2018).";
+        if (lowerInput.includes('experience') || lowerInput.includes('history') || lowerInput.includes('career') || lowerInput.includes('work') || lowerInput.includes('background')) {
+            return "Shadiq has 4+ years of experience in software development. His career path: Software Engineer II at Cymbeline Innovation (Feb 2025–Present) → Software Engineer I at Cymbeline (Feb 2024–Jan 2025) → Software Developer at Flyers Soft (2023–2024) → Software Developer at Triofi Technologies (2021–2022). Before that, he was Assistant Team Lead at Vindhya e-infomedia (2019–2020) and Technical Support Engineer at Microsys (2017–2018).";
         }
 
         // ── Broad: Projects ────────────────────────────────────────────────
-        if (lowerInput.includes('project') || lowerInput.includes('built') || lowerInput.includes('portfolio') || lowerInput.includes('case study') || lowerInput.includes('work sample')) {
-            return "Shashidhar has built 6 major projects: 1) Warehouse Management System (WMS) – enterprise IIoT solution for Panasonic, 2) Stock Automation Platform – real-time trading system, 3) IIoT Monitoring Dashboard – machine health analytics, 4) QR Layout Designer & Libraries – open-source NPM tools, 5) E-Commerce Application – responsive shopping platform, 6) HR Management System (HRMS) – employee & payroll management. Which one would you like to explore?";
+        if (lowerInput.includes('project') || lowerInput.includes('built') || lowerInput.includes('portfolio') || lowerInput.includes('case study')) {
+            return "Shadiq has built 6 major projects: 1) Warehouse Management System (WMS) – enterprise IIoT solution for Panasonic, 2) Stock Automation Platform – real-time trading system, 3) IIoT Monitoring Dashboard – machine health analytics, 4) QR Layout Designer & Libraries – open-source NPM tools, 5) E-Commerce Application – responsive shopping platform, 6) HR Management System (HRMS) – employee management & payroll. Which would you like to explore?";
         }
 
         // ── Skills / Tech Stack ────────────────────────────────────────────
         if (lowerInput.includes('skill') || lowerInput.includes('tech') || lowerInput.includes('stack') || lowerInput.includes('language') || lowerInput.includes('framework') || lowerInput.includes('tool')) {
-            return `Shashidhar's full tech stack: **Frontend**: ${skillsData.frontend.join(', ')} | **Backend & APIs**: ${skillsData.backend.join(', ')} | **Database & Cloud**: ${skillsData.database.join(', ')} | **Tools & Concepts**: ${skillsData.tools.join(', ')}`;
+            return `Shadiq's complete tech stack: **Frontend**: ${skillsData.frontend.join(', ')} | **Backend & APIs**: ${skillsData.backend.join(', ')} | **Database & Cloud**: ${skillsData.database.join(', ')} | **Tools & Concepts**: ${skillsData.tools.join(', ')}`;
         }
 
         // ── Specific skill queries ─────────────────────────────────────────
-        if (lowerInput.includes('react')) return "Shashidhar has 4+ years of React.js experience, building enterprise WMS modules, trading dashboards, and e-commerce platforms. He uses TypeScript and Material UI for type-safe, scalable interfaces.";
-        if (lowerInput.includes('vue') || lowerInput.includes('nuxt')) return "Shashidhar has worked with Vue.js (for the IIoT Monitoring Dashboard) and Nuxt.js (at Flyers Soft for SSR web applications). He also used Vuetify as a UI library.";
-        if (lowerInput.includes('python') || lowerInput.includes('fastapi')) return "Shashidhar works with Python and FastAPI for backend development, used in the Stock Automation Platform alongside Node.js and PostgreSQL.";
-        if (lowerInput.includes('node') || lowerInput.includes('express')) return "Shashidhar builds REST APIs with Node.js and Express.js, used across WMS, Stock Automation, HRMS, and other projects. He is comfortable with both JavaScript and TypeScript in the backend.";
-        if (lowerInput.includes('mongodb') || lowerInput.includes('database') || lowerInput.includes('postgresql')) return "Shashidhar works with MongoDB (used in WMS, Stock, HRMS projects) and PostgreSQL (used in the Stock Automation Platform). He designs schemas and integrates REST APIs with databases.";
-        if (lowerInput.includes('typescript')) return "TypeScript is one of Shashidhar's primary languages. He uses it for type-safe frontend development (React + MUI) and backend APIs (Node.js + Express), ensuring maintainable, scalable code.";
+        if (lowerInput.includes('react')) return "Shadiq has 4+ years of experience with React.js, building enterprise WMS modules, trading dashboards, and e-commerce platforms. He uses TypeScript and Material UI for type-safe and scalable interfaces.";
+        if (lowerInput.includes('vue') || lowerInput.includes('nuxt')) return "Shadiq has worked with Vue.js (for the IIoT Monitoring Dashboard) and Nuxt.js (at Flyers Soft for SSR web applications). He also uses Vuetify as a UI library.";
+        if (lowerInput.includes('python') || lowerInput.includes('fastapi')) return "Shadiq works with Python and FastAPI for backend development, used in the Stock Automation Platform along with Node.js and PostgreSQL.";
+        if (lowerInput.includes('node') || lowerInput.includes('express')) return "Shadiq builds REST APIs with Node.js and Express.js, used across WMS, Stock Automation, HRMS, and other projects. He's comfortable with both JavaScript and TypeScript on the backend.";
+        if (lowerInput.includes('mongodb') || lowerInput.includes('database') || lowerInput.includes('postgresql')) return "Shadiq works with MongoDB (used in WMS, Stock, HRMS projects) and PostgreSQL (used in Stock Automation Platform). He designs schemas and integrates REST APIs with databases.";
+        if (lowerInput.includes('typescript')) return "TypeScript is one of Shadiq's primary languages. He uses it for type-safe frontend development (React + MUI) and backend APIs (Node.js + Express), ensuring maintainable and scalable code.";
 
         // ── Education ──────────────────────────────────────────────────────
-        if (lowerInput.includes('education') || lowerInput.includes('degree') || lowerInput.includes('college') || lowerInput.includes('university') || lowerInput.includes('study') || lowerInput.includes('qualification')) {
+        if (lowerInput.includes('education') || lowerInput.includes('degree') || lowerInput.includes('school') || lowerInput.includes('university') || lowerInput.includes('learning')) {
             const eduList = educationData.map(e => `${e.degree} from ${e.school} (${e.year})`).join(' | ');
-            return `Shashidhar's education: ${eduList}. His engineering background in Electronics & Communication laid the foundation for his transition into software development.`;
+            return `Shadiq's education: ${eduList}. His background in Vocational Software Engineering provides a strong foundation for his development expertise.`;
         }
 
         // ── Contact / Hire ─────────────────────────────────────────────────
-        if (lowerInput.includes('contact') || lowerInput.includes('email') || lowerInput.includes('hire') || lowerInput.includes('reach') || lowerInput.includes('call') || lowerInput.includes('available')) {
-            return "Shashidhar is open to new opportunities! You can reach him via the Contact section on this portfolio, connect on LinkedIn: linkedin.com/in/shashidhar-naik-aab5b512a, or check his GitHub: github.com/shashi089";
+        if (lowerInput.includes('contact') || lowerInput.includes('email') || lowerInput.includes('hire') || lowerInput.includes('reach') || lowerInput.includes('phone') || lowerInput.includes('available')) {
+            return "Shadiq is open to new opportunities! You can reach him through the Contact section on this portfolio, connect on LinkedIn: linkedin.com/in/shadiq-sardi-ramadhan-946013388, or check his GitHub: github.com/embar-botak";
         }
 
         // ── Resume / CV ────────────────────────────────────────────────────
         if (lowerInput.includes('resume') || lowerInput.includes('cv') || lowerInput.includes('download')) {
-            return "You can download Shashidhar's latest resume (Shashidhar_Naik_2025.pdf) from the navigation bar or the Contact section of this portfolio.";
+            return "You can download Shadiq's latest resume from the navigation bar or the Contact section on this portfolio.";
         }
 
         // ── Social Links ───────────────────────────────────────────────────
         if (lowerInput.includes('github') || lowerInput.includes('linkedin') || lowerInput.includes('npmjs') || lowerInput.includes('social') || lowerInput.includes('profile')) {
-            return "Find Shashidhar online: GitHub → github.com/shashi089 | LinkedIn → linkedin.com/in/shashidhar-naik-aab5b512a | NPM → npmjs.com/~shashidharlbs";
+            return "Find Shadiq online: GitHub → github.com/embar-botak | LinkedIn → linkedin.com/in/shadiq-sardi-ramadhan-946013388 | NPM packages available on npmjs.com";
         }
 
         // ── Why Hire ───────────────────────────────────────────────────────
-        if (lowerInput.includes('why hire') || lowerInput.includes('strength') || lowerInput.includes('value') || lowerInput.includes('best at') || lowerInput.includes('why you')) {
-            return "You should hire Shashidhar because he brings a rare blend of architectural vision and hands-on execution. He doesn't just write code — he builds scalable, maintainable systems that drive business value, from leading enterprise WMS projects to publishing open-source tools used by the community. He's also a strong team player and mentor.";
+        if (lowerInput.includes('why hire') || lowerInput.includes('strength') || lowerInput.includes('value') || lowerInput.includes('best at') || lowerInput.includes('why should')) {
+            return "You should hire Shadiq because he combines architectural vision with hands-on execution. He doesn't just write code — he builds scalable, maintainable systems that drive business value, from leading enterprise WMS projects to publishing open-source tools. He's also a strong team member and mentor.";
         }
 
         // ── Default fallback ───────────────────────────────────────────────
-        return "I'm still learning! Try asking about 'Experience', 'Projects', 'Tech Stack', 'Open Source', 'Education', or something specific like 'Tell me about the WMS project' or 'What is qrlayout-ui?'";
+        return "I'm still learning! Try asking about 'Experience', 'Projects', 'Tech Stack', 'Open Source', 'Education', or specific things like 'Tell me about the WMS project' or 'What is qrlayout-ui?'";
     };
 
     const handleSendMessage = async (e?: React.FormEvent) => {
@@ -381,7 +376,7 @@ const PortfolioAssistant = () => {
         }, 1000);
     };
 
-    const quickAsks = ["Experience", "Projects", "Skills", "Open Source", "Contact"];
+    const quickAsks = ["Projects", "Skills", "Contact", "Education"];
 
     const handleQuickAsk = (text: string) => {
         setInputValue(text);
@@ -421,7 +416,7 @@ const PortfolioAssistant = () => {
                     >
                         <div className="bg-slate-800 text-slate-200 px-4 py-3 rounded-2xl rounded-br-sm shadow-xl border border-slate-700/50 flex items-start gap-3 relative before:content-[''] before:absolute before:bottom-[-6px] before:right-6 before:w-3 before:h-3 before:bg-slate-800 before:border-r before:border-b before:border-slate-700/50 before:rotate-45">
                             <div className="flex-1">
-                                <p className="text-sm font-medium">👋 Hi there! I can help you explore my projects and experience.</p>
+                                <p className="text-sm font-medium">👋 Hi! I can help you explore my projects and experience.</p>
                             </div>
                             <button
                                 onClick={() => setShowGreeting(false)}
@@ -532,7 +527,7 @@ const PortfolioAssistant = () => {
                                     type="text"
                                     value={inputValue}
                                     onChange={(e) => setInputValue(e.target.value)}
-                                    placeholder="Ask me anything..."
+                                    placeholder="Ask anything..."
                                     className="flex-1 bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-2 text-sm text-slate-200 focus:outline-none focus:border-violet-500/50 transition-colors placeholder:text-slate-600"
                                 />
                                 <button

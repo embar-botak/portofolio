@@ -17,20 +17,18 @@ const Hero = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <div className="inline-block px-3 py-1 mb-4 border border-violet-500/30 rounded-full bg-violet-500/10 text-violet-300 text-sm font-medium">
-                        Available for opportunities
-                    </div>
+
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                         Hi, I'm <br />
-                        <span className="text-gradient">Shashidhar Naik</span>
+                        <span className="text-gradient">Shadiq Sardi</span>
                     </h1>
                     <p className="text-xl text-slate-400 mb-8 max-w-lg leading-relaxed">
-                        Software Engineer II specializing in building scalable enterprise web applications with the <span className="text-violet-400 font-semibold">MERN</span> & <span className="text-pink-400 font-semibold">MEVN</span> stacks.
+                        Aspiring Frontend Developer with a focus on modern JavaScript technologies. Skilled in building responsive web interfaces and possessing a foundational understanding of UI/UX principles to enhance user experience.
                     </p>
 
                     <div className="flex flex-wrap gap-4 mb-10">
                         <Link to="projects" smooth={true} offset={-100} className="px-8 py-3 bg-violet-600 hover:bg-violet-700 text-white rounded-lg font-medium transition-all shadow-lg shadow-violet-600/20 cursor-pointer">
-                            View Work
+                            View Projects
                         </Link>
                         <a href="/Shashidhar_Naik_2025.pdf" download className="px-8 py-3 border border-slate-700 hover:border-violet-500 hover:text-violet-400 text-slate-300 rounded-lg font-medium transition-all flex items-center gap-2 group">
                             <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
@@ -40,9 +38,8 @@ const Hero = () => {
 
                     <div className="flex gap-6" role="list" aria-label="Social profiles">
                         {[
-                            { icon: <Github aria-hidden="true" />, href: 'https://github.com/shashi089', label: 'GitHub profile — shashi089' },
-                            { icon: <Linkedin aria-hidden="true" />, href: 'https://www.linkedin.com/in/shashidhar-naik-aab5b512a/', label: 'LinkedIn profile — Shashidhar Naik' },
-                            { icon: <Package aria-hidden="true" />, href: 'https://www.npmjs.com/~shashidharlbs', label: 'NPM packages by Shashidhar Naik' },
+                            { icon: <Github aria-hidden="true" />, href: 'https://github.com/embar-botak', label: 'GitHub profile — embar-botak' },
+                            { icon: <Linkedin aria-hidden="true" />, href: 'https://www.linkedin.com/in/shadiq-sardi-ramadhan-946013388/', label: 'LinkedIn profile — shadiq-sardi-ramadhan' },
                         ].map((social, index) => (
                             <a
                                 key={index}
@@ -82,19 +79,19 @@ const Hero = () => {
                                 <span className="text-violet-400">const</span> <span className="text-blue-400">developer</span> = <span className="text-yellow-400">{"{"}</span>
                             </div>
                             <div className="pl-6">
-                                <span className="text-slate-500">name:</span> <span className="text-green-400">'Shashidhar Naik'</span>,
+                                <span className="text-slate-500">name:</span> <span className="text-green-400">'Shadiq Sardi'</span>,
                             </div>
                             <div className="pl-6">
-                                <span className="text-slate-500">role:</span> <span className="text-green-400">'MERN/MEVN Stack Developer'</span>,
+                                <span className="text-slate-500">role:</span> <span className="text-green-400">'UI/UX Designer (Frontend Aware)'</span>,
                             </div>
                             <div className="pl-6">
-                                <span className="text-slate-500">experience:</span> <span className="text-orange-400">4+</span>,
+                                <span className="text-slate-500">years of learning:</span> <span className="text-orange-400">3+</span>,
                             </div>
                             <div className="pl-6">
-                                <span className="text-slate-500">skills:</span> <span className="text-yellow-400">['React','Javascript','Nuxt Js', 'Node Js', 'Express Js','TypeScript', 'MongoDB', 'PostgreSQL']</span>,
+                                <span className="text-slate-500">skills:</span> <span className="text-yellow-400">['figma','UI/UX design','html','css','javascript','next.js','git']</span>,
                             </div>
                             <div className="pl-6">
-                                <span className="text-slate-500">currentFocus:</span> <span className="text-green-400">'Enterprise IIOT Solutions'</span>
+                                <span className="text-slate-500">currentFocus:</span> <span className="text-green-400">'Improving UI/UX & frontend skills'</span>
                             </div>
                             <div>
                                 <span className="text-yellow-400">{"}"}</span>;

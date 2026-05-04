@@ -6,25 +6,20 @@ import { GraduationCap, Calendar, Award } from 'lucide-react';
 const Education = () => {
     const education = [
         {
-            degree: "B.E. (Electronics and Communication Engineering)",
-            school: "BLDEA’s College of Engineering and Technology, Bijapur",
-            year: "2017",
+            degree: "SMK (Pengembangan Perangkat Lunak dan Gim)",
+            school: "SMK Ghama Caraka",
+            year: "2024",
             score: "",
-            details: "Specialized in Electronics and Communication."
+            details: "Focused on software engineering and game development with practical industry experience.",
+            url: "https://sekolahghama.com/"
         },
         {
-            degree: "PUC (Higher Secondary Education)",
-            school: "SNJPNM’S PU Science College, Nidasoshi",
-            year: "2013",
+            degree: "Islamic Boarding School (MTs Darul Fallah)",
+            school: "Pesantren Pertanian Darul Fallah",
+            year: "2020",
             score: "",
-            details: "Focus on Science curriculum."
-        },
-        {
-            degree: "SSLC (Secondary Education)",
-            school: "Rani Channamma High School, Hukkeri",
-            year: "2011",
-            score: "",
-            details: "High academic performance."
+            details: "Combined religious education with agricultural skills and entrepreneurship development.",
+            url: "https://pesantrendarulfallah.wordpress.com/"
         }
     ];
 
@@ -46,19 +41,22 @@ const Education = () => {
 
                 <div className="max-w-4xl mx-auto space-y-8">
                     {education.map((edu, index) => (
-                        <motion.div
+                        <motion.a
+                            href={edu.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             key={index}
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50 flex flex-col md:flex-row gap-6 items-start md:items-center hover:border-violet-500/30 transition-colors"
+                            className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50 flex flex-col md:flex-row gap-6 items-start md:items-center hover:border-violet-500/50 hover:bg-slate-800/60 transition-all cursor-pointer group hover:-translate-y-1 shadow-lg hover:shadow-violet-900/20"
                         >
                             <div className="flex-shrink-0 bg-violet-500/10 p-4 rounded-lg">
                                 <Award className="w-8 h-8 text-violet-400" />
                             </div>
                             <div className="flex-grow">
-                                <h3 className="text-xl font-bold text-slate-100 mb-1">{edu.degree}</h3>
+                                <h3 className="text-xl font-bold text-slate-100 mb-1 group-hover:text-violet-300 transition-colors">{edu.degree}</h3>
                                 <p className="text-violet-400 font-medium mb-2">{edu.school}</p>
                                 <p className="text-slate-400 text-sm">{edu.details}</p>
                             </div>
@@ -68,7 +66,7 @@ const Education = () => {
                                 <span className="w-px h-4 bg-slate-700 mx-2"></span>
                                 <span className="text-violet-400 font-bold">{edu.score}</span>
                             </div>
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
             </div>
